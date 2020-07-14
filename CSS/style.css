@@ -1,0 +1,466 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding:  0 4%;
+}
+
+.logo {
+    width: 210px;
+    margin-top: 14px;
+}
+
+.main_nav {
+    display: flex;
+    font-size: 1.25rem;
+    margin-top: 34px;
+}
+
+.main_nav li {
+    margin-left: 36px;
+}
+
+.main_nav a {
+    color: #432;
+    display: block;
+    padding: 10px;
+}
+
+.main_nav a:hover {
+    opacity: 0.7;
+}
+
+.burger_icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .4s;
+    border: 1px solid #333;
+    border-radius: 9999px;
+    display: block;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 10000;
+}
+
+.burger_icon span {
+    background-color: #333;
+    width: 20px;
+    height: 1px;
+    position: absolute;
+    top: calc(50% - (1px / 2));
+    left: 20px;
+    transition: all .2s;
+    transform-origin: center center;
+}
+
+.top {
+    transform: translate(0, -7px);
+}
+
+.bottom {
+    transform: translate(0, 7px);
+}
+
+.page_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.news_header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home_content {
+    text-align: center;
+    margin-top: 15%;
+    letter-spacing: 2px;
+}
+
+.home_content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+
+/*見出し*/
+.page_title {
+    font-size:  4rem;
+    letter-spacing: 2px;
+    font-family: 'Karla', sans-serif;
+    font-weight: lighter;
+}
+
+.page_subtitle {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/*ボタン*/
+.button {
+    font-size: 1em;
+    background-color: rgb(110, 151, 194);
+    color: #ffffff;
+    padding: 13px 60px;
+    border-radius: 5px;
+    -webkit-appearance:none;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+/*大きな背景画像*/
+.big_bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#home {
+    background-image: url(../images/main-bg.jpg);
+    height: 100vh;
+}
+
+#news {
+    background-image: url(../images/news-bg.jpg);
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+#news .page_title {
+    text-align: center;
+}
+
+/*記事部分*/
+article {
+    width: 74%;
+}
+
+/*サイドバー*/
+aside {
+    width:  22%;
+}
+
+.news_contents {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/*フッター*/
+footer {
+    background: rgb(44, 65, 61);
+    text-align: center;
+    padding: 100px 0;
+    position:absolute;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+.post_info {
+    position: relative;
+    padding-top: 4px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+/*記事部分*/
+article {
+    width: 70%;
+}
+
+/*サイドバー*/
+aside {
+    width: 22%;
+    margin-top: 50px;
+}
+
+.news_contents {
+    display: flex;
+    justify-content:  space-between;
+}
+
+.post_date {
+    color: rgb(103, 141, 198);
+    border: 2px solid rgb(103, 141, 198);
+    font-size: 1.625rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+
+.post_date span {
+    font-size: 1rem;
+    border-top: 1px rgb(103, 141, 198) solid;
+    padding-top: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+.post_title {
+    letter-spacing: 3px;
+    font-size:  1.5em;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.post_title,
+.post_cat {
+    margin-left: 140px;
+}
+
+article img {
+    margin-bottom: 40px;
+}
+
+article p {
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    font-weight: 100;
+}
+
+.sub_title {
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    padding: 0 8px 8px;
+    font-weight: 300;
+    border-bottom: 1.5px  rgb(150, 117, 117) solid;
+}
+
+aside p {
+    padding: 15px;
+    font-size: 1em;
+    line-height: 2;
+}
+
+.sub_menu {
+    margin-bottom: 50px;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+}
+
+.sub_menu li {
+    border-bottom:  1px rgb(123, 105, 105) solid;
+}
+
+.sub_menu a {
+    color: #432;
+    padding: 15px;
+    display: block;
+}
+
+.sub_menu a:hover{
+    background-color:#f9f9f9 ;
+}
+
+/* CONTACT*/
+#contact {
+    background-image: url(../images/contact-bg.jpg);
+    min-height: 100vh;
+}
+
+.title_contact {
+    margin-top: 10%;
+}
+
+form div {
+    margin: 30px 0;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255,.5);
+    border:1px #fff solid ;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 10em;
+}
+
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* 店舗情報　地図*/
+#location {
+    padding: 4% 0;
+}
+.acsess_info {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.access_title {
+    text-align: left;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+}
+
+.location_wrapper {
+    display: flex;
+    margin-top: 70px;
+}
+
+.address {
+    margin-bottom: 20px;
+}
+
+.address p{
+    margin-bottom:20px;
+}
+
+.location_info {
+    width: 30%;
+    padding-right: 50px;
+}
+
+.location_info p {
+    padding: 6px 10px;
+}
+
+.location_map {
+    width: 70%;
+}
+
+/* iframe */
+iframe  {
+    width: 100%;
+}
+
+/* SNS */
+#sns {
+    background: #aba196;
+    padding: 4% 0;
+}
+
+#sns .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sns .sub_title {
+    margin-bottom: 30px;
+}
+
+.sns_box {
+    width: 30%;
+}
+
+.title_sns {
+    color: #f2f0f0;
+    font-size: 1.2em;
+}
+
+/* Menu */
+#menu {
+    background-image: url(../images/menu-bg.jpg);
+    min-height: 40vh;
+}
+
+.menu_content {
+    max-width: 570x;
+    margin-top: 20%;
+    padding: 50px;
+}
+
+.menu_content .page_title {
+    text-align: center;
+}
+
+.menu_content p {
+    font-size: 1.3em;
+    line-height: 2;
+}
+
+.menu_explanation {
+    text-align: center;
+    margin-top:70px;
+}
+
+.grid {
+    display: grid;
+    gap:30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+.item {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.item_name {
+    font-size: 1em;
+}
+
+.item_price {
+    font-size: 1em;
+    display: inline-block;
+}
+
+.item:hover {
+    opacity: 0.7;
+}
